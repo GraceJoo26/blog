@@ -36,15 +36,25 @@
   </div>
 </nav>
 <div class="container mt-4">
-  <h5>Vue 개발자 블로그</h5>
+  <router-view :블로그글 = "블로그글"></router-view>
+
+ <!--  <List :블로그글 = "블로그글"/> -->
 </div>
+
 </template>
 
 <script>
+/* import List from './components/List.vue'; */
+import blog from './assets/blog.js';
 
 export default {
   name: 'App',
   components: {
+  },
+  data(){
+    return{
+      블로그글:blog
+    }
   }
 }
 </script>

@@ -22,7 +22,7 @@
   </div>
 </nav>
 <div class="container mt-4">
-  <router-link to="/">홈페이지</router-link>
+  <router-link to="/" class="me-3">홈페이지</router-link>
   <router-link to="/list">리스트페이지</router-link>
   <router-view :블로그글 = "블로그글"></router-view>
 

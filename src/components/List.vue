@@ -1,15 +1,7 @@
 <template>
-  <div>
-    <h5>{{ 블로그글[0].title }}</h5>
-    <p>{{ 블로그글[0].date }}</p>
-  </div>
-  <div>
-    <h5>{{ 블로그글[1].title }}</h5>
-    <p>{{ 블로그글[1].date }}</p>
-  </div>
-  <div>
-    <h5>{{ 블로그글[2].title }}</h5>
-    <p>{{ 블로그글[2].date }}</p>
+  <div v-for="(blog,i) in 블로그글" :key="blog">
+    <h5 @click="$router.push('detail/i')">{{ 블로그글[i].title }}</h5>
+    <p>{{ 블로그글[i].date }}</p>
   </div>
 </template>
 
@@ -19,7 +11,7 @@ export default {
     name : 'list',
     props : {
         블로그글 : Array,
-    }
+    },
 }
 </script>
 
